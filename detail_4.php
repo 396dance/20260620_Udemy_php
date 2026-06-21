@@ -21,13 +21,15 @@ fclose($fp);
   <h1>問題<?php echo $questions[4][0] ?></h1>
   <h2><?php echo $questions[4][1] ?></h2>
   <li>
-    <ol><a href="" onclick="quizAnswer('a', '<?php echo $questions[4][6]; ?>');">a：<?php echo $questions[4][2] ?></a></ol>
-    <ol><a href="" onclick="quizAnswer('b', '<?php echo $questions[4][6]; ?>');">b：<?php echo $questions[4][3] ?></a></ol>
-    <ol><a href="" onclick="quizAnswer('c', '<?php echo $questions[4][6]; ?>');">c：<?php echo $questions[4][4] ?></a></ol>
-    <ol><a href="" onclick="quizAnswer('d', '<?php echo $questions[4][6]; ?>');">d：<?php echo $questions[4][5] ?></a></ol>
+    <ol style="list-style: none; padding: 0; margin-bottom: 10px;"><a href="" onclick="quizAnswer('a', '<?php echo $questions[4][6]; ?>');return false;" style="display: block;">a：<?php echo $questions[4][2] ?></a></ol>
+    <ol style="list-style: none; padding: 0; margin-bottom: 10px;"><a href="" onclick="quizAnswer('b', '<?php echo $questions[4][6]; ?>');return false;" style="display: block;">b：<?php echo $questions[4][3] ?></a></ol>
+    <ol style="list-style: none; padding: 0; margin-bottom: 10px;"><a href="" onclick="quizAnswer('c', '<?php echo $questions[4][6]; ?>');return false;" style="display: block;">c：<?php echo $questions[4][4] ?></a></ol>
+    <ol style="list-style: none; padding: 0; margin-bottom: 10px;"><a href="" onclick="quizAnswer('d', '<?php echo $questions[4][6]; ?>');return false;" style="display: block;">d：<?php echo $questions[4][5] ?></a></ol>
   </li>
-  <p>答え：<?php echo $questions[4][6] ?></p>
-  <div>解説：<?php echo $questions[4][7] ?></div>
+  <div id="answerArea" style="display: none;">
+    <p>答え：<?php echo $questions[4][6] ?></p>
+    <div>解説：<?php echo $questions[4][7] ?></div>
+  </div>
   <div><a href="./template/index.tmp.php">一覧へ戻る</a></div>
 </body>
 
