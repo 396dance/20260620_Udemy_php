@@ -1,3 +1,12 @@
+<?php
+// 1. まずは自分でCSVを読み込んでデータを準備する
+$fp = fopen(__DIR__ . "/data.csv", "r"); 
+$questions = [];
+while($data = fgetcsv($fp, escape: "\\")){
+    $questions[] = $data;
+}
+fclose($fp);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,16 +15,16 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>問題1</h1>
-  <h2>問題文：あああああああああああああ</h2>
+  <h1>問題<?php echo $questions[1][0] ?></h1>
+  <h2><?php echo $questions[1][1] ?></h2>
   <li>
-    <ol>選択肢</ol>
-    <ol>選択肢</ol>
-    <ol>選択肢</ol>
-    <ol>選択肢</ol>
+    <ol>a：<?php echo $questions[1][2] ?></ol>
+    <ol>b：<?php echo $questions[1][3] ?></ol>
+    <ol>c：<?php echo $questions[1][4] ?></ol>
+    <ol>d：<?php echo $questions[1][5] ?></ol>
   </li>
-  <p>答え：</p>
-  <div>解説あああああああああああああああああああああ</div>
-  <div><a href="./index.php">一覧へ戻る</a></div>
+  <p>答え：<?php echo $questions[1][6] ?></p>
+  <div>解説：<?php echo $questions[1][7] ?></div>
+  <div><a href="./template/index.tmp.php">一覧へ戻る</a></div>
 </body>
 </html>
