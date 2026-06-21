@@ -14,16 +14,17 @@ fclose($fp);
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="./script.js" defer></script>
 </head>
 
 <body>
   <h1>問題<?php echo $questions[3][0] ?></h1>
   <h2><?php echo $questions[3][1] ?></h2>
   <li>
-    <ol>a：<?php echo $questions[3][2] ?></ol>
-    <ol>b：<?php echo $questions[3][3] ?></ol>
-    <ol>c：<?php echo $questions[3][4] ?></ol>
-    <ol>d：<?php echo $questions[3][5] ?></ol>
+    <ol><a href="" onclick="quizAnswer('a', '<?php echo $questions[3][6]; ?>');">a：<?php echo $questions[3][2] ?></a></ol>
+    <ol><a href="" onclick="quizAnswer('b', '<?php echo $questions[3][6]; ?>');">b：<?php echo $questions[3][3] ?></a></ol>
+    <ol><a href="" onclick="quizAnswer('c', '<?php echo $questions[3][6]; ?>');">c：<?php echo $questions[3][4] ?></a></ol>
+    <ol><a href="" onclick="quizAnswer('d', '<?php echo $questions[3][6]; ?>');">d：<?php echo $questions[3][5] ?></a></ol>
   </li>
   <p>答え：<?php echo $questions[3][6] ?></p>
   <div>解説：<?php echo $questions[3][7] ?></div>
