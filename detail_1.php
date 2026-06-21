@@ -1,5 +1,5 @@
 <?php
-// 1. まずは自分でCSVを読み込んでデータを準備する
+// まずは自分でCSVを読み込んでデータを準備する
 $fp = fopen(__DIR__ . "/data.csv", "r");
 $questions = [];
 while ($data = fgetcsv($fp, escape: "\\")) {
