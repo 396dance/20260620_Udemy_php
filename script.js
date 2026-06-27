@@ -7,6 +7,6 @@ function quizAnswer(targetId, correctAnswer) {
     // 正解か不正解か判定したい
     return alert("正解です！！");
   else {
-    return alert("不正解");
+    return alert("残念！！不正解です。。");
   }
 }
