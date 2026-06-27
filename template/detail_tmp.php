@@ -28,7 +28,7 @@ $explanation = $questions[$index][7];
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="../style.css">
   <script src="../script.js" defer></script>
 </head>
 
@@ -36,12 +36,12 @@ $explanation = $questions[$index][7];
   <h1>問題<?php echo $quiz_number ?></h1>
   <h2><?php echo $question ?></h2>
   <ui>
-    <ol style="list-style: none; padding: 0; margin-bottom: 10px;"><a href="" onclick="quizAnswer('a', '<?php echo $current_answer; ?>');return false;" style="display: block;">a：<?php echo $answer_a ?></a></ol>
-    <ol style="list-style: none; padding: 0; margin-bottom: 10px;"><a href="" onclick="quizAnswer('b', '<?php echo $current_answer; ?>');return false;" style="display: block;">b：<?php echo $answer_b ?></a></ol>
-    <ol style="list-style: none; padding: 0; margin-bottom: 10px;"><a href="" onclick="quizAnswer('c', '<?php echo $current_answer; ?>');return false;" style="display: block;">c：<?php echo $answer_c ?></a></ol>
-    <ol style="list-style: none; padding: 0; margin-bottom: 10px;"><a href="" onclick="quizAnswer('d', '<?php echo $current_answer; ?>');return false;" style="display: block;">d：<?php echo $answer_d ?></a></ol>
+    <ol class="quiz-list"><a href="" onclick="quizAnswer('a', '<?php echo $current_answer; ?>');return false;">a：<?php echo $answer_a ?></a></ol>
+    <ol class="quiz-list"><a href="" onclick="quizAnswer('b', '<?php echo $current_answer; ?>');return false;">b：<?php echo $answer_b ?></a></ol>
+    <ol class="quiz-list"><a href="" onclick="quizAnswer('c', '<?php echo $current_answer; ?>');return false;">c：<?php echo $answer_c ?></a></ol>
+    <ol class="quiz-list"><a href="" onclick="quizAnswer('d', '<?php echo $current_answer; ?>');return false;">d：<?php echo $answer_d ?></a></ol>
   </ui>
-  <div id="answerArea" style="display: none;">
+  <div id="answerArea">
     <p>答え：<?php echo $current_answer ?></p>
     <div>解説：<?php echo $explanation ?></div>
   </div>

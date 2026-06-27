@@ -1,3 +1,17 @@
+#answerArea {
+  display: none;
+}
+
+a {
+  display: block;
+}
+
 ol:hover {
   background-color: #d3d3d3;
+}
+
+.quiz-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 10px;
 }
