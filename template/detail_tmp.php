@@ -11,14 +11,21 @@ $quiz_number = $_GET['quiz_number'] ?? null;
 // 文字列の '1' を数値の 1 に直して、配列のインデックス（0から始まる）に合わせる
 $index = (int)$quiz_number - 1;
 
-$quiz_number = $questions[$index][0];
-$question = $questions[$index][1];
-$answer_a = $questions[$index][2];
-$answer_b = $questions[$index][3];
-$answer_c = $questions[$index][4];
-$answer_d = $questions[$index][5];
-$current_answer = $questions[$index][6];
-$explanation = $questions[$index][7];
+if (isset($questions[$index][0])) {
+  // 存在する問題Noの場合
+  $quiz_number = $questions[$index][0];
+  $question = $questions[$index][1];
+  $answer_a = $questions[$index][2];
+  $answer_b = $questions[$index][3];
+  $answer_c = $questions[$index][4];
+  $answer_d = $questions[$index][5];
+  $current_answer = $questions[$index][6];
+  $explanation = $questions[$index][7];
+} else {
+  // 存在しない問題Noの場合
+  require_once __DIR__ . '/page404.php';
+  return;
+};
 
 ?>
 <!DOCTYPE html>
